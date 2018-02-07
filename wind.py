@@ -17,5 +17,6 @@ def main():
 	#command.append('-csv')
 	#command.append('2018020418_f000.csv')
     #(out,err) =subprocess.Popen(command,stdout=subprocess.PIPE).communicate()
- 	subprocess.run(["ls", "-l"]) 
+ 	subprocess.call(["ls", "-l"]) 
+
 main()
