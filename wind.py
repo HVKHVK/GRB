@@ -9,7 +9,6 @@ def main():
     #latitude = input("Please enter latitude: ")
     #longitude = input("Please enter longitude: ")
 	#cmd_input = 'cd /usr/src/GRB/; /usr/bin/grib2/wgrib2/wgrib2 2018020418_f000.grb -csv 2018020418_f000.csv'
-	cmd = "ls"
- 	p = subprocess.Popen(cmd) 
+ 	p = subprocess.call('cd /usr/src/GRB/; /usr/bin/grib2/wgrib2/wgrib2 2018020418_f000.grb -csv 2018020418_f000.csv')
 
 main()
