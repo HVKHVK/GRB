@@ -16,6 +16,6 @@ def main():
 	#command.append('2018020418_f000.grb')
 	#command.append('-csv')
 	#command.append('2018020418_f000.csv')
-    process =subprocess.Popen(command,stdout=subprocess.PIPE).communicate()
+    (out,err) =subprocess.Popen(command,stdout=subprocess.PIPE).communicate()
 
 main()
