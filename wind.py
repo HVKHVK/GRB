@@ -9,7 +9,6 @@ def main():
     #longitude = input("Please enter longitude: ")
 
 	cmd_input = "cd /usr/src/GRB/; /usr/bin/grib2/wgrib2/wgrib2 2018020418_f000.grb -csv 2018020418_f000.csv"
-
-    subprocess.call([cmd_input,'-h'])
+    subprocess.call(cmd_input,shell=True)
 
 main()
