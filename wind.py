@@ -17,8 +17,5 @@ def main():
 	#command.append('-csv')
 	#command.append('2018020418_f000.csv')
     #(out,err) =subprocess.Popen(command,stdout=subprocess.PIPE).communicate()
-    command = ['date']
-	command.append('+%Y-%m-%d %H:%M:%S')
-	(out,err) = subprocess.Popen(command,stdout=subprocess.PIPE).communicate()
-
+ 	subprocess.run(["ls", "-l"]) 
 main()
