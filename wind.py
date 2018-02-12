@@ -11,8 +11,6 @@ def main():
     lon = sys.argv[3]
     meter = sys.argv[4]
     p = subprocess.Popen(['/usr/bin/grib2/wgrib2/wgrib2', filename, '-s', '-lon', lan, lon ])
-    #parser = argparse.ArgumentParser()
-    #parser.parse_args()
-#print(parser)
+    p.stdout
 
 main()
