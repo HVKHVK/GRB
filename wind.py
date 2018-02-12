@@ -38,8 +38,8 @@ def main():
                 elif ('val=' == output[x+70:x+74]):
                     VGRD.append(output[x+74:x+83])
 
-    for i in range(0,len(date)-1)
-        print(57.29578*(atan2(UGRD[0],VGR[0]))+180)
+    for i in range(1,len(date))
+        print(57.29578*(atan2(UGRD[i-1],VGR[i-1]))+180)
 
 # print(date[0],date[1],date[2],date[3])
 #   print(meter[0],meter[1],meter[2],meter[3])
