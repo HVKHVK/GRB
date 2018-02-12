@@ -40,7 +40,7 @@ def main():
 
 
     for i in range(1,len(date)):
-        print(57.29578*(math.atan2(UGRD[i-1],VGR[i-1]))+180)
+        print(57.29578*(math.atan2(UGRD[i-1],VGRD[i-1]))+180)
 
 # print(date[0],date[1],date[2],date[3])
 #   print(meter[0],meter[1],meter[2],meter[3])
