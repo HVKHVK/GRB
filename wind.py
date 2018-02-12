@@ -20,6 +20,7 @@ def main():
 
     for x in range(1,length):
         print ('False')
+        print (output[x:x+1])
         if(val1 == output[x:x+1]):
             print ('True')
            
