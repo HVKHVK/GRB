@@ -23,6 +23,6 @@ def main():
         if(b'd=' == output[x:x+2]):
             date2 = output[x+2:x+5] + ' ' + output[x+6:x+8] + ' ' + output[x+9:x+11] + ' ' + output[x+12:x+14]
             date.append(date2)
-            print date[0]
+            print (date[0])
 
 main()
