@@ -10,7 +10,7 @@ def main():
     lan = sys.argv[2]
     lon = sys.argv[3]
     p = subprocess.Popen(['/usr/bin/grib2/wgrib2/wgrib2', filename, '-s', '-lon', lan, lon ], stdout=subprocess.PIPE)
-    output = p.stdout.read()
+    output = p.stdout.read().decode("utf-8")
     length = len(output)
 
     date = []
@@ -20,8 +20,8 @@ def main():
     direction = []
 
     for x in range(1,length):
-        if(b'd=' == output[x:x+2]):
-            date2 = output[x+2:x+14]
+        if('d=' == output[x:x+2]):
+            date2 = output[x+2:x+13]
             date.append(date2)
             print (date[0])
 
