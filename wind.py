@@ -10,6 +10,6 @@ def main():
     lan = sys.argv[2]
     lon = sys.argv[3]
     meter = sys.argv[4]
-    p = subprocess.run(['/usr/bin/grib2/wgrib2/wgrib2', filename, '-s', '-lon', lan, lon ], stdout=subprocess.PIPE)
+    p = subprocess.Popen(['/usr/bin/grib2/wgrib2/wgrib2', filename, '-s', '-lon', lan, lon ], stdout=subprocess.PIPE)
     p.stdout
 main()
