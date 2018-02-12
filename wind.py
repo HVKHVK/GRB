@@ -40,7 +40,9 @@ def main():
 
 
     for i in range(0,len(UGRD)):
-        print(57.29578*(math.atan2(float(UGRD[i]),float(VGRD[i])))+180)
+        direction.append(57.29578*(math.atan2(float(UGRD[i]),float(VGRD[i])))+180)
+        speed.append(SQRT(float(UGRD[i])*float(UGRD[i])+float(VGRD[i])*float(VGRD[i])))
+        print(speed[i])
 
 # print(date[0],date[1],date[2],date[3])
 #   print(meter[0],meter[1],meter[2],meter[3])
