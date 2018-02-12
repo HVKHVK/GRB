@@ -9,7 +9,6 @@ def main():
     filename = sys.argv[1]
     lan = sys.argv[2]
     lon = sys.argv[3]
-    meter = sys.argv[4]
     p = subprocess.Popen(['/usr/bin/grib2/wgrib2/wgrib2', filename, '-s', '-lon', lan, lon ], stdout=subprocess.PIPE)
     output = p.stdout.read()
     length = len(output)
@@ -20,7 +19,7 @@ def main():
     val4 = 'VGRD:'
 
     for x in range(1,length):
-        if(val1 == output[x:x1]):
+        if(val1 == output[x:x+1]):
             print ('True')
            
 
