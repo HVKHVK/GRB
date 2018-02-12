@@ -1,15 +1,17 @@
 import sys
 import time
 import os
-import subprocess
+import subprocess, shlex
 
 
-def enter():
-	
 def main():
-    text = input("prompt")
-    print (text)
-    #grb_file = input("Please enter name of grb file (ex:2018020418_f000): ")
-    #subprocess.call("cd /usr/src/GRB/; /usr/bin/grib2/wgrib2/wgrib2 2018020418_f000.grb -csv 2018020418_f000.csv" ,shell=True)
+    #filename = sys.argv[1]
+    #lan = sys.argv[2]
+    #lon = sys.argv[3]
+    #meter = sys.argv[4]
+    command_line = input()
+    args = shlex.split(command_line)
+    print(args);
+    p = subprocess.Popen(args)
 
 main()
