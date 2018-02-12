@@ -15,7 +15,7 @@ def main():
 
     for x in range(1,length):
         if(b'd=' == output[x:x+2]):
-            print (output[x+3:x+13])
+            print (output[x+2:x+13])
            
 
 
