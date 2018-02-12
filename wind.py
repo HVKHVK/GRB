@@ -12,6 +12,6 @@ def main():
     meter = sys.argv[4]
     p = subprocess.Popen(['/usr/bin/grib2/wgrib2/wgrib2', filename, '-s', '-lon', lan, lon ], stdout=subprocess.PIPE)
     output = p.stdout.read()
-    print output
+    print (output)
 
 main()
