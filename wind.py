@@ -49,7 +49,7 @@ def main():
         speed.append(math.sqrt(float(UGRD[i])*float(UGRD[i])+float(VGRD[i])*float(VGRD[i])))
 
     for i in range(0,len(UGRD)):
-        print(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + direction[i] + ' ' + speed[i])
+        print(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]))
 
 main()
 
