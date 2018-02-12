@@ -17,10 +17,10 @@ def main():
     
     date = []
     meter = []
-    speed = []
-    direction = []
     UGRD = []
     VGRD = []
+    speed = []
+    direction = []
 
     for x in range(1,length):
         if('d=' == output[x:x+2]):
@@ -38,10 +38,16 @@ def main():
                 elif ('val=' == output[x+70:x+74]):
                     VGRD.append(output[x+74:x+83])
 
+    for i in range(0,len(date)-1)
+        print(57.29578*(atan2(UGRD[0],VGR[0]))+180)
+
 # print(date[0],date[1],date[2],date[3])
 #   print(meter[0],meter[1],meter[2],meter[3])
 
 main()
 
+
+#DIRECTION=57.29578*(arctangent(UGRD,VGRD))+180.
+#SPEED=SQRT(UGRD*UGRD+VGRD*VGRD)
 
 #1:0:d=2018020418:UGRD:80 m above ground:anl::lon=30.000000,lat=36.000000,val=-6.21079\n2:3067:d=2018020418:VGRD:80 m above ground:anl::lon=30.000000,lat=36.000000,val=0.509568\n3:6134:d=2018020418:UGRD:100 m above ground:anl::lon=30.000000,lat=36.000000,val=-6.25109\n4:9201:d=2018020418:VGRD:100 m above ground:anl::lon=30.000000,lat=36.000000,val=0.5323\n'
