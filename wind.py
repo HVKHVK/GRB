@@ -28,8 +28,7 @@ def main():
             date.append(date2)
             print(output[x+13:x+17])
             if ('UGRD' == output[x+13:x+17]):
-                meter2 = output[x+19:x+21]
-                print(meter2)
+                print( output[x+18:x+21])
                 meter.append(output[x+19:x:21])
             elif ('VGRD' == output[x+13:x+17]):
                 meter.append(output[x+19:x+21])
