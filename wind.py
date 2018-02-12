@@ -4,9 +4,6 @@ import os
 import subprocess, math
 import argparse, csv
 
-with open('thefile.csv', 'rb') as f:
-    data = list(csv.reader(f))
-
 def main():
     filename = sys.argv[1]
     lan = sys.argv[2]
@@ -53,9 +50,11 @@ def main():
     for i in range(0,len(UGRD)):
         print(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]))
 
-    writer = csv.writer(open("/usr/src/GRB/", 'w'))
+    f = open("xx.csv", "wb")
+    writer = csv.writer(f)
     for i in range(0,len(UGRD)):
         writer.writerow(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]))
+    f.close()
 
 main()
 
