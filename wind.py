@@ -13,10 +13,16 @@ def main():
     output = p.stdout.read()
     length = len(output)
 
+    date = []
+    coordinates = []
+    meter = []
+    speed = []
+    direction = []
+
     for x in range(1,length):
         if(b'd=' == output[x:x+2]):
-            print (output[x+2:x+13])
-           
-
+            date2 = output[x+2:x+5] + ' ' + output[x+6:x+8] + ' ' + output[x+9:x+11] + ' ' + output[x+12:x+14]
+            date.append(date2)
+            print date(i)
 
 main()
