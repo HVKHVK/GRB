@@ -24,28 +24,32 @@ def main():
 
     for x in range(1,length):
         if('d=' == output[x:x+2]):
-            date.append(output[x+8:x+10] + '/' + output[x+6:x+8] + '/' + output[x+2:x+6] + ' ' + output[x+10:x+12] + ':00')
             if ('UGRD' == output[x+13:x+17]):
-                meter.append(output[x+18:x+21])
                 if('val=' == output[x+69:x+73]):
+                    date.append(output[x+8:x+10] + '/' + output[x+6:x+8] + '/' + output[x+2:x+6] + ' ' + output[x+10:x+12] + ':00')
+                    meter.append(output[x+18:x+21])
                     UGRD.append(output[x+73:x+82])
                 elif ('val=' == output[x+70:x+74]):
+                    date.append(output[x+8:x+10] + '/' + output[x+6:x+8] + '/' + output[x+2:x+6] + ' ' + output[x+10:x+12] + ':00')
+                    meter.append(output[x+18:x+21])
                     UGRD.append(output[x+74:x+83])
             elif ('VGRD' == output[x+13:x+17]):
-                meter.append(output[x+18:x+21])
                 if('val=' == output[x+69:x+73]):
+                    date.append(output[x+8:x+10] + '/' + output[x+6:x+8] + '/' + output[x+2:x+6] + ' ' + output[x+10:x+12] + ':00')
+                    meter.append(output[x+18:x+21])
                     VGRD.append(output[x+73:x+82])
                 elif ('val=' == output[x+70:x+74]):
+                    date.append(output[x+8:x+10] + '/' + output[x+6:x+8] + '/' + output[x+2:x+6] + ' ' + output[x+10:x+12] + ':00')
+                    meter.append(output[x+18:x+21])
                     VGRD.append(output[x+74:x+83])
 
 
     for i in range(0,len(UGRD)):
         direction.append(57.29578*(math.atan2(float(UGRD[i]),float(VGRD[i])))+180)
         speed.append(math.sqrt(float(UGRD[i])*float(UGRD[i])+float(VGRD[i])*float(VGRD[i])))
-        print(speed[i])
 
-# print(date[0],date[1],date[2],date[3])
-#   print(meter[0],meter[1],meter[2],meter[3])
+    for i in range(0,len(UGRD)):
+        print(meter[i])
 
 main()
 
