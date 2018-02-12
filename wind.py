@@ -2,7 +2,7 @@ import sys
 import time
 import os
 import subprocess, math
-import argparse
+import argparse, csv
 
 
 def main():
@@ -50,6 +50,11 @@ def main():
 
     for i in range(0,len(UGRD)):
         print(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]))
+
+    with open('deneme.csv', 'w', newline='') as csvfile:
+        spamwriter = csv.writer(csvfile, delimiter=' ', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        for i in range(0,len(UGRD)):
+            spamwriter.writerow((date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]))
 
 main()
 
