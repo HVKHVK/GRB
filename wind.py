@@ -54,8 +54,8 @@ def main():
         print(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]))
 
     writer = csv.writer(open("/usr/src/GRB/", 'w'))
-        for i in range(0,len(UGRD)):
-            writer.writerow(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]))
+    for i in range(0,len(UGRD)):
+        writer.writerow(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]))
 
 main()
 
