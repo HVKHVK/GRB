@@ -19,6 +19,7 @@ def main():
     val4 = 'VGRD:'
 
     for x in range(1,length):
+        print ('False')
         if(val1 == output[x:x+1]):
             print ('True')
            
