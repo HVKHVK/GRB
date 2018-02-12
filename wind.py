@@ -20,8 +20,8 @@ def main():
 
     for x in range(1,length):
         print ('False')
-        print (output[x:x+1])
-        if(val1 == output[x:x+1]):
+        print (output[x:x+2])
+        if(val1 == output[x:x+2]):
             print ('True')
            
 
