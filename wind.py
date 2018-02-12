@@ -20,7 +20,7 @@ def main():
     val4 = 'VGRD:'
 
     for x in range(1,length):
-        if(val1 == output[x:x1])
+        if(val1 == output[x:x1]):
             print ('True')
            
 
