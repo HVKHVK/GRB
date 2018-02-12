@@ -32,7 +32,7 @@ def main():
                 meter.append(output[x+18:x+21])
 
     print(date[0],date[1],date[2],date[3])
-    print(meter[0],meter[1],meter[2],meter[3])
+    print(meter[0],meter[2])
 
 main()
 
