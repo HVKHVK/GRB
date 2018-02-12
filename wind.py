@@ -13,15 +13,15 @@ def main():
     output = p.stdout.read()
     length = len(output)
 
-    val1 = 'd='
+    val1 = 'd'
     val2 = 'val='
     val3 = 'UGRD:'
     val4 = 'VGRD:'
 
     for x in range(1,length):
         print ('False')
-        print (output[x:x+2])
-        if(val1 == output[x:x+2]):
+        print (output[x:x+1])
+        if(val1 == output[x:x+1]):
             print ('True')
            
 
