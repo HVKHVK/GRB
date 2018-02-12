@@ -12,6 +12,6 @@ def main():
     #command_line = input()
     #args = shlex.split(command_line)
     #print(args);
-    p = subprocess.Popen(['cd','usr/src/GRB;', '/usr/bin/grib2/wgrib2/wgrib2', filename, '-s', '-lon', lan, lon ])
+    p = subprocess.Popen(['/usr/bin/grib2/wgrib2/wgrib2', filename, '-s', '-lon', lan, lon ])
 
 main()
