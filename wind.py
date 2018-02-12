@@ -27,11 +27,11 @@ def main():
             date2 = output[x+8:x+10] + '/' + output[x+6:x+8] + '/' + output[x+2:x+6] + ' ' + output[x+10:x+12] + ':00'
             date.append(date2)
             if ('UGRD' == output[x+14:x+17]):
-                UGRD = output[x+19:x:21]
+                meter.append(output[x+19:x:21])
             elif ('VGRD' == output[x+14:x+17]):
-                VGRD = output[x+19:x:21]
+                meter.append(output[x+19:x:21])
 
-    print (UGRD[0],UGRD[1],VGRD[0],VGRD[1])
+    print(meter[0],meter[1],meter[2],meter[3])
 
 main()
 
