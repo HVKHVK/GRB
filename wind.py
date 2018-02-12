@@ -39,8 +39,7 @@ def main():
                     VGRD.append(output[x+74:x+83])
 
 
-    for i in range(0,len(date)):
-        print(i)
+    for i in range(0,len(UGRD)):
         print(57.29578*(math.atan2(float(UGRD[i]),float(VGRD[i])))+180)
 
 # print(date[0],date[1],date[2],date[3])
