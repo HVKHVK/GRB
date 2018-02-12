@@ -53,7 +53,8 @@ def main():
     f = open("xx.csv", "wb")
     writer = csv.writer(f)
     for i in range(0,len(UGRD)):
-        writer.writerow(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]))
+        String[] entries = "date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i])".split("*");
+        writer.writerow(entries)
     f.close()
 
 main()
