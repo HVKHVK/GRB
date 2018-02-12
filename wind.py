@@ -28,7 +28,6 @@ def main():
             if ('UGRD' == output[x+13:x+17]):
                 meter.append(output[x+18:x+21])
                 print(output[x+35:x+50])
-                if('val=' == output[x+35:x+50])
             elif ('VGRD' == output[x+13:x+17]):
                 meter.append(output[x+18:x+21])
 
