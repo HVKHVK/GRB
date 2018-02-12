@@ -33,6 +33,10 @@ def main():
                     print(output[x+74:x+83])
             elif ('VGRD' == output[x+13:x+17]):
                 meter.append(output[x+18:x+21])
+                if('val=' == output[x+69:x+73]):
+                    print(output[x+73:x+82])
+                elif ('val=' == output[x+70:x+74]):
+                    print(output[x+74:x+83])
 
 # print(date[0],date[1],date[2],date[3])
 #   print(meter[0],meter[1],meter[2],meter[3])
