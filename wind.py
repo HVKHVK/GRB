@@ -48,9 +48,10 @@ def main():
         speed.append(math.sqrt(float(UGRD[i])*float(UGRD[i])+float(VGRD[i])*float(VGRD[i])))
 
     with open('output.csv', 'w', newline='') as csvfile:
-        spamwriter = csv.writer(csvfile, delimiter=' ',
-                        quotechar=' ', quoting=csv.QUOTE_MINIMAL)
-
+        #spamwriter = csv.writer(csvfile, delimiter=' ', quotechar=' ', quoting=csv.QUOTE_MINIMAL)
+        #skipinitialspace=True
+        spamwriter = csv.writer(csvfile)
+        
         for i in range(0,len(UGRD)):
             print(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]) + '\n')
             spamwriter.writerow([str(date[i*2])]+[str(coordinates)]+[str(meter[i*2])]+[str(direction[i])]+[str(speed[i])])
