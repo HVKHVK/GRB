@@ -53,8 +53,7 @@ def main():
 
         for i in range(0,len(UGRD)):
             print(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]) + '\n')
-            output = date[i*2],coordinates,meter[i*2],str(direction[i]),str(speed[i])
-            spamwriter.writerow(str(output))
+            spamwriter.writerow(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]))
 
 main()
 
