@@ -4,6 +4,9 @@ import os
 import subprocess, math
 import argparse, csv
 
+with open('output.csv', 'w', newline='') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=' ',
+                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
 def main():
     filename = sys.argv[1]
     lan = sys.argv[2]
@@ -48,14 +51,8 @@ def main():
         speed.append(math.sqrt(float(UGRD[i])*float(UGRD[i])+float(VGRD[i])*float(VGRD[i])))
 
     for i in range(0,len(UGRD)):
-        print(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]))
-
-    f = open("xx.csv", "wb")
-    writer = csv.writer(f)
-    for i in range(0,len(UGRD)):
-        String[] entries = "date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i])".split("*");
-        writer.writerow(entries)
-    f.close()
+        print(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]) + '\n')
+        spamwriter.writerow(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]) + '\n')
 
 main()
 
