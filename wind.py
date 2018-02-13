@@ -1,6 +1,4 @@
-import sys
-import time
-import os
+import sys, os, time
 import subprocess, math
 import argparse, csv
 
@@ -49,17 +47,12 @@ def main():
 
     with open('output.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        initial = "|Date|Hour|Latitude|longlitude|Meter|Direction|Speed"
-        #writer.writerow(str(initial))
         
         for i in range(0,len(UGRD)):
-            #print(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]) + '\n')
             writer.writerow([str(date[i*2])]+[str(coordinates)]+[str(meter[i*2])]+[str(direction[i])]+[str(speed[i])])
 
 main()
-
-
-#DIRECTION=57.29578*(arctangent(UGRD,VGRD))+180.
+#DIRECTION=57.29578*(arctangent(UGRD,VGRD))+180
 #SPEED=SQRT(UGRD*UGRD+VGRD*VGRD)
 
-#1:0:d=2018020418:UGRD:80 m above ground:anl::lon=30.000000,lat=36.000000,val=-6.21079\n2:3067:d=2018020418:VGRD:80 m above ground:anl::lon=30.000000,lat=36.000000,val=0.509568\n3:6134:d=2018020418:UGRD:100 m above ground:anl::lon=30.000000,lat=36.000000,val=-6.25109\n4:9201:d=2018020418:VGRD:100 m above ground:anl::lon=30.000000,lat=36.000000,val=0.5323\n'
+
