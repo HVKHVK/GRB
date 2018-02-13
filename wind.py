@@ -6,13 +6,13 @@ import argparse, csv
 
 def main():
     filename = sys.argv[1]
-    lan = sys.argv[2]
+    lat = sys.argv[2]
     lon = sys.argv[3]
-    p = subprocess.Popen(['/usr/bin/grib2/wgrib2/wgrib2', filename, '-s', '-lon', lan, lon ], stdout=subprocess.PIPE)
+    p = subprocess.Popen(['/usr/bin/grib2/wgrib2/wgrib2', filename, '-s', '-lon', lat, lon ], stdout=subprocess.PIPE)
     output = p.stdout.read().decode("utf-8")
     length = len(output)
     
-    coordinates = lan + ' ' + lon
+    coordinates = lat + ' ' + lon
     
     date = []
     meter = []
@@ -48,9 +48,9 @@ def main():
         speed.append(math.sqrt(float(UGRD[i])*float(UGRD[i])+float(VGRD[i])*float(VGRD[i])))
 
     with open('output.csv', 'w', newline='') as csvfile:
-        #spamwriter = csv.writer(csvfile, delimiter=' ', quotechar=' ', quoting=csv.QUOTE_MINIMAL)
-        #skipinitialspace=True
         spamwriter = csv.writer(csvfile)
+        
+        spamwriter.writerow("| Date | Clock | Latitude | Longitude | Meter | Direction | Speed |")
         
         for i in range(0,len(UGRD)):
             print(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]) + '\n')
