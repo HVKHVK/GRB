@@ -49,7 +49,7 @@ def main():
 
     with open('output.csv', 'w', newline='') as csvfile:
         spamwriter = csv.writer(csvfile, delimiter=' ',
-                        quotechar='', quoting=csv.QUOTE_MINIMAL)
+                        quotechar=' ', quoting=csv.QUOTE_MINIMAL)
 
         for i in range(0,len(UGRD)):
             print(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]) + '\n')
