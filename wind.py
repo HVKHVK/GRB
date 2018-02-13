@@ -51,7 +51,7 @@ def main():
         spamwriter = csv.writer(csvfile)
         #'| ' + 'Date' + ' | ' + 'Clock' + ' | ' + 'Latitude' + ' | ' + 'Longitude' + ' | ' + 'Meter' + ' | ' + 'Direction' + ' | ' + 'Speed' + ' |'
         initial = "|Date|Hour|Latitude|longlitude|Meter|Direction|Speed"
-        spamwriter.writerow(initial)
+        spamwriter.writerow(str(initial))
         
         for i in range(0,len(UGRD)):
             print(date[i*2] + ' ' + coordinates + ' ' + meter[i*2] + ' ' + str(direction[i]) + ' ' + str(speed[i]) + '\n')
