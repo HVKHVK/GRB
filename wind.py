@@ -6,7 +6,7 @@ def main():
     filename = sys.argv[1]
     lat = sys.argv[2]
     lon = sys.argv[3]
-    p = subprocess.Popen(['/usr/bin/grib2/wgrib2/wgrib2', filename, '-s', '-lon', lat, lon ], stdout=subprocess.PIPE)
+    p = subprocess.Popen(['/usr/bin/grib2/wgrib2/wgrib2', filename, '-lon', lat, lon ], stdout=subprocess.PIPE)
     output = p.stdout.read().decode("utf-8")
     length = len(output)
     
