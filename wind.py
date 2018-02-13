@@ -27,20 +27,20 @@ def main():
                 if('val=' == output[x+69:x+73]):
                     date.append(output[x+8:x+10] + '/' + output[x+6:x+8] + '/' + output[x+2:x+6] + ' ' + output[x+10:x+12] + ':00')
                     meter.append(output[x+18:x+21])
-                    UGRD.append(output[x+73:x+82])
+                    UGRD.append(output[x+73:x+79])
                 elif ('val=' == output[x+70:x+74]):
                     date.append(output[x+8:x+10] + '/' + output[x+6:x+8] + '/' + output[x+2:x+6] + ' ' + output[x+10:x+12] + ':00')
                     meter.append(output[x+18:x+21])
-                    UGRD.append(output[x+74:x+83])
+                    UGRD.append(output[x+74:x+80])
             elif ('VGRD' == output[x+13:x+17]):
                 if('val=' == output[x+69:x+73]):
                     date.append(output[x+8:x+10] + '/' + output[x+6:x+8] + '/' + output[x+2:x+6] + ' ' + output[x+10:x+12] + ':00')
                     meter.append(output[x+18:x+21])
-                    VGRD.append(output[x+73:x+82])
+                    VGRD.append(output[x+73:x+79])
                 elif ('val=' == output[x+70:x+74]):
                     date.append(output[x+8:x+10] + '/' + output[x+6:x+8] + '/' + output[x+2:x+6] + ' ' + output[x+10:x+12] + ':00')
                     meter.append(output[x+18:x+21])
-                    VGRD.append(output[x+74:x+83])
+                    VGRD.append(output[x+74:x+80])
 
 
     for i in range(0,len(UGRD)):
